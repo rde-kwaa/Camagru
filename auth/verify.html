@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Camagru Verification</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <style type="text/css">
+            /* Fonts from Googs*/
+            @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+            }
+
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+            }
+
+            body {
+                background-color: #f4f4f4ee; 
+                margin: 0; 
+                padding: 0;
+            }
+
+            p {
+                margin: auto;
+            }
+
+            h1 {
+                font-size: 48px;
+                font-weight: 400;
+                margin: 0;
+                text-align: center;
+            }
+
+            td.welcome {
+                padding: 40px 20px 20px 20px;
+                border-radius: 4px 4px 0px 0px;
+                letter-spacing: 4px;
+                color: #111111;
+                font-family: 'Lato', Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 48px;
+                background-color: #ffffff;
+            }
+
+            td.formtext {
+                padding: 20px 30px 40px 30px;
+                color: #666666;
+                font-family: 'Lato', Helvetica, Arial, sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 25px;
+                background-color: #ffffff;
+            }
+
+            a.verify {
+                font-size: 20px;
+                font-family: Helvetica, Arial, sans-serif; 
+                color: #ffffff; 
+                text-decoration: none; 
+                padding: 15px 25px; 
+                border-radius: 2px; 
+                border: 1px solid #659cf0; 
+                display: inline-block;
+                -webkit-transition-duration: 0.5s; /* Safari */
+                transition-duration: 0.5s;
+            }
+
+            button {
+                font-size: 20px;
+                font-family: Helvetica, Arial, sans-serif; 
+                text-decoration: none; 
+                color: #ffffff;
+                background-color: #659cf0;
+                border: 2px solid #659cf0;
+                border-radius: 2px;
+
+                padding: 15px 25px;
+                display: inline-block;
+                -webkit-transition-duration: 0.5s; /* Safari */
+                transition-duration: 0.5s;
+            }
+
+            button:hover {
+                color: #ffffff;
+                background-color: #78a7ee;
+            }
+
+            td.footer {
+                padding: 0px 20px 30px 30px; 
+                color: #666666; 
+                font-family: 'Lato', Helvetica, Arial, sans-serif; 
+                font-size: 14px; 
+                font-weight: 400; 
+                line-height: 18px;
+                background-color: #f4f4f4;
+                text-align: left;
+            }
+        </style>
+    </head>
+
+    <!-- Pre-displayed Text -->
+    <div style="display: none; overflow: hidden;">
+        We found you! By we I mean me, I did. Anyways...
+    </div>
+
+    <!-- Main Body -->
+    <table cellspacing="0" width="100%">
+        <!-- Header Logo Row -->
+        <tr>
+            <td bgcolor="#dd2456" align="center">
+                <table width="100%" style="max-width: 600px;" >
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px 10px 40px 10px;">
+                            <a href="http://127.0.0.1:8100/index.php">
+                            <img alt="wtc_" src="http://findryan.online/img/wtc_.png" width="50" height="50"></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Welcome Banner Row -->
+        <tr>
+            <td bgcolor="#dd2456" align="center" style="padding: 0px 10px 0px 10px;">
+                <table cellspacing="0" width="100%" style="max-width: 600px;" >
+                    <tr>
+                        <td class="welcome"><h1>Welcome!</h1></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Form Text Block -->
+        <tr>
+            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+                <table  cellspacing="0" width="100%" style="max-width: 600px;" >
+                    <!-- Opening Text Row -->
+                    <tr>
+                        <td class="formtext" bgcolor="#ffffff" align="left">
+                            <p>We're excited to have you get started. 
+                            First, you need to confirm your account. 
+                            Just press the button below.</p>
+                        </td>
+                    </tr>
+                    <!-- Confirm Account -->
+                    <tr>
+                        <td bgcolor="#ffffff">
+                            <table width="100%"  cellspacing="0">
+                                <tr>
+                                    <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                                        <table  cellspacing="0">
+                                            <tr>
+                                                <td align="center" style="border-radius: 3px;" bgcolor="#4a8cf2">
+                                                    <form id="verf" action="http://127.0.0.1:8100/auth/verify.php?token=%token%" method="POST">
+                                                        <button type="submit" name="usr-verf">Verify Account</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Backup Plan Row -->
+                    <tr>
+                        <td class="formtext" style="padding: 0px 30px 0px 30px;">
+                            <p>If that doesn't work, copy and paste the following link in your browser:</p>
+                        </td>
+                    </tr>
+                    <!-- Unique Link Row -->
+                    <tr>
+                        <td class="formtext" style="padding: 20px 30px 20px 30px;">
+                            <p>
+                                <a href="http://127.0.0.1:8100/auth/verify.php?token=%token%" style="color: #dd2456;">
+                                http://127.0.0.1:8100/verify.php?token=%token%</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Feedback Row -->
+                    <tr>
+                        <td class="formtext" style="padding: 0px 30px 20px 30px;">
+                            <p>If you have any questions, just reply to this email, we're always happy to help out.</p>
+                        </td>
+                    </tr>
+                    <!-- Sayonara Row -->
+                    <tr>
+                        <td class="formtext" style="border-radius: 0px 0px 4px 4px;">
+                            <p>Cheers,<br>The Camagru Demon</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;">
+                <table  cellspacing="0" width="100%" style="max-width: 600px;">
+                    <!-- Unsubscribe -->
+                    <tr>
+                        <td class="footer">
+                            <p>If these emails get annoying, please feel free to
+                                <a href="http://127.0.0.1:8100/unsub.php" style="color: #111111; font-weight: 700;">unsubscribe</a>.
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Address -->
+                    <tr>
+                        <td class="footer">
+                            <p>P3 Terrace Level, Portswood Square, V & A Waterfront, Cape Town - 8001</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</html>

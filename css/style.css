@@ -1,0 +1,386 @@
+/* HTML, Body, UL and Container Styles */
+html, body {
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+	height: 100%;
+	min-height: 1000px;
+}
+
+video, canvas {
+	width: 45%;
+	height: 60%;
+	background-color: rgba(196, 163, 174, 0.459);
+	border: 5px solid #dd2456;
+	margin: 20px auto;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h1 {
+	padding-top: 15px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.comh {
+	text-align: left;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.centerwrapper {
+	text-align: center;
+    width: 100%;
+    height: 200px;
+}
+
+#photocap {
+	width: 85%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	margin: auto 0;
+	text-align: center;
+}
+
+/* General Input and Button Styles */
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #19a5e6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Header Style */
+
+header {
+	background: #333641;
+	color: #ffffff;
+	padding-top: 20px;
+	min-height: 70px;
+	border-bottom: #dd2456 3px solid;
+}
+
+header a {
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li {
+	display: inline;
+	padding: 0 11px 0px 11px;
+}
+
+header #logo {
+	float: left;
+	padding-right: 20px;
+}
+
+header #logo img {
+	width: 63px;
+	padding-right: 20px;
+}
+
+header #logo h1 {
+	margin: 0;
+}
+
+header nav {
+	float: right;
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+
+header .highlight, header .current a {
+	color: #dd2456;
+	font-weight: bold;
+}
+
+header a:hover {
+	color: #329ac4;
+	font-weight: bold;
+}
+
+.logmsg {
+	font-weight: bold;
+}
+
+.logout {
+    background-color: #19a5e6;
+    color: white;
+    padding: 7px 10px;
+    margin: 4px 0;
+    cursor: pointer;
+	width: 80%;
+	align-content: center;
+}
+
+/* Login Screen Style */
+
+#login{
+	min-height: 35%;
+	background:url('../img/mini.jpg') round;
+	max-height: 80%;
+	margin-left: 0%;
+	margin-right: 0%;
+	text-align: center;
+	color: #333641c2;
+}
+
+#login h1 {
+	padding-top: 20px;
+	font-size: 55px;
+	margin-bottom: 20px;
+}
+
+#login p {
+	font-size: 20px;
+}
+
+#login form {
+	padding-bottom: 20px;
+}
+
+/* Forgot Password Style */
+
+#forgot {
+	padding: 15px;
+	color: #ffffff;
+	background: #333641;
+}
+
+/* Option Icon Style */
+
+#options {
+	margin-top: 40px;
+	min-height: 100%;
+}
+
+#options .opt {
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 100px;
+	display: inline-block;
+}
+
+#options .opt p {
+	margin-left: auto;
+    margin-right: auto;
+	min-width: 232px;
+	max-width: 280px;
+}
+
+#options .opt img {
+	width: 95px;
+}
+
+/* Filters and Recent Style */
+
+#options .fil {
+	margin: 1px;
+	width: 200px;
+    text-align: center;
+	display: inline-block;   
+	padding: 10px;
+	padding-bottom: 100px;
+}
+
+#options .fil h3 {
+	font-size: 18px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#options .fil img {
+	width: 80px;
+	vertical-align: middle;
+}
+
+#options .fil button {
+	text-align: center;
+	background-color: #ffffff00;
+    color: rgba(255, 255, 255, 0);
+    border: none;
+	cursor: pointer;
+}
+
+#options .recent {
+	margin: 1px;
+	width: 280px;
+    text-align: center;
+	display: inline-block;   
+	padding: 10px;
+	padding-bottom: 100px;
+}
+
+#options .recent img {
+	width: 180px;
+	vertical-align: middle;
+}
+
+/* Sign Up Style */
+
+.sharedl {
+	display: inline-block;
+	width: 49%;
+}
+
+.sharedr {
+	position: absolute;
+	display: inline-block;
+	width: 49%;
+	right: 0;
+}
+
+.signuperror {
+	font-size: 13px;
+	color: #dd2456;
+}
+
+.signupsuccess {
+	font-size: 13px;
+	color: rgb(63, 197, 22);
+}
+
+/* Gallery Style */
+
+.gallery {
+	padding: 0;
+	margin: auto 0;
+	text-align: center;
+}
+
+.pagination {
+	width: 80%;
+	text-align: center;
+	margin: auto 0;
+	display: inline-block;
+}
+
+.potato {
+	text-align: center;
+	width: 54%;
+	height: 72%;
+	margin: auto 0;
+}
+
+.gallyview {
+	text-align: center;
+	width: 72%;
+	height: 96%;
+	margin: auto 0;
+}
+
+.like {
+	padding-top: 10px;
+	background: url(./img/like.png) 0 0 no-repeat;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+	background: url(http://127.0.0.1:8100/img/unlike.png);
+	background-size: 30px 30px;
+	padding-left: 30px;
+	padding-bottom: 12px;
+}
+input[type="checkbox"]:checked + label {
+	background: url(http://127.0.0.1:8100/img/like.png);
+    background-size: 30px 30px;
+	padding-left: 30px;
+	padding-bottom: 12px;
+}
+
+.delete {
+	background-color: #ffffff00;
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+    background-image: url(http://127.0.0.1:8100/img/delete.png);
+    background-repeat: no-repeat;
+}
+
+.putton {
+    background-color: #19a5e6;
+    color: white;
+	padding: 14px 20px;
+	margin: 0 -20px;
+	text-align: center;
+    border: none;
+	cursor: pointer;
+	width: 100%;
+	display: inline-block;
+	font-size: 11px;
+}
+
+.putton:hover {
+    opacity: 0.8;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.comm {
+	text-align: left;
+}
+
+.user {
+	font-style: italic;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+/* Footer Style */
+
+footer {
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	padding: 20px;
+	margin-top: 30px;
+	color: #ffffff;
+	background-color: #333641c2;
+	text-align: center;
+	font-size: 13px;
+}

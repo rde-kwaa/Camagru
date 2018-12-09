@@ -1,0 +1,12 @@
+<video id="video" width="480" height="360" autoplay></video>
+<canvas id="canvas" width="480" height="360"></canvas>
+
+<script>
+    var video = document.getElementById('video');
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({video:true}).then(function(stream) {
+            video.srcObject = stream;
+            video.play();
+        });
+    }
+</script>

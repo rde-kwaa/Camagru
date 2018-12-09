@@ -1,0 +1,47 @@
+<button id="capture">Take Photo</button>
+<label class="putton"><input type="file" id="imageLoader" name="imageLoader"/>Upload</label>
+<form id="pnp" action="./includes/photo.inc.php" target="_self" method="POST">
+<button type="submit" id="postpic" name="pic-pos">Post</button>
+<input type="hidden" id="imagedata" name="idata"></form>
+
+<script>
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
+	var video = document.getElementById('video');
+
+	document.addEventListener("DOMContentLoaded", function() {
+	    // Capture without any stickers
+		document.getElementById("capture").addEventListener("click", function() {
+	        context.globalAlpha = 1;
+		    context.drawImage(video, 0, 0, 480, 360);
+		});
+		// Upload to canvas
+		var imageLoader = document.getElementById('imageLoader');
+    	imageLoader.addEventListener('change', handleImage, false);
+		
+		function handleImage(e) {
+	    	var reader = new FileReader();
+	    	reader.onload = function(event) {
+        		var img = new Image();
+        		img.onload = function() {
+        		    canvas.width = img.width;
+        		    canvas.height = img.height;
+        		    context.drawImage(img,0,0);
+        		}
+        		img.src = event.target.result;
+    		}
+    		reader.readAsDataURL(e.target.files[0]);     
+		}
+		// Submit the photo in canvas
+		document.getElementById("postpic").addEventListener("click", function() {
+	        var imagedata = canvas.toDataURL();
+			document.getElementById("imagedata").value = imagedata;
+			stop();
+			if (imagedata.length < 6000) {
+				document.getElementById("pnp").action = "index.php?error=takepicture";
+			} else if (imagedata.length > 20000000) {
+				document.getElementById("pnp").action = "index.php?error=fileTooLarge";
+			}
+	    });
+	});
+</script>

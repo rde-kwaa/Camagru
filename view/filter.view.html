@@ -1,0 +1,59 @@
+<div class="fil">
+    <button id="sepia"><img src="./img/sepia.png"></button>
+    <h3>Sepia</h3>
+</div>
+<div class="fil">
+    <button id="waugh"><img id="waugh" src="./img/oldman.png"></button>
+    <h3>Waugh</h3>
+</div>
+<div class="fil">
+    <button id="gooby"><img src="./img/gooby.png"></button>
+    <h3>Gooby</h3>
+</div>
+<div class="fil">
+    <button id="red"><img src="./img/red.png"></button>
+    <h3>Red</h3>
+</div>
+
+<script>
+    var sticker = new Image();
+
+    document.getElementById("sepia").addEventListener("click", function() {
+		sticker.src = './img/sepia.png';
+	    context.fillStyle = 'rgba(255, 255, 255, 1)';
+	    context.globalAlpha = 0.6;
+	    context.drawImage(canvas, 0, 0);
+        context.drawImage(sticker, 0, 0, canvas.width, canvas.height);
+	});
+	document.getElementById("waugh").addEventListener("click", function() {
+		sticker.src = './img/oldman.png';
+	    context.fillStyle = 'rgba(255, 255, 255, 1)';
+	    context.globalAlpha = 0.9;
+	    context.drawImage(canvas, 0, 0);
+        context.drawImage(sticker, 0, canvas.height/1.8, canvas.width/2.2, canvas.height/2.2);
+	});
+    document.getElementById("gooby").addEventListener("click", function() {
+        sticker.src = './img/gooby.png';
+	    context.fillStyle = 'rgba(255, 255, 255, 1)';
+	    context.globalAlpha = 0.9;
+	    context.drawImage(canvas, 0, 0);
+        context.drawImage(sticker, canvas.height/1.4, canvas.height/1.8, canvas.width/2.2, canvas.height/2.2);
+	});
+    document.getElementById("red").addEventListener("click", function() {
+        context.fillStyle = 'rgba(221, 36, 86, 1)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.globalAlpha = 0.6;
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+	});
+	
+	function ajaxPOST() {
+        var xhr = new XMLHttpRequest();
+		var url = "includes/remrec.inc.php";
+		var pid = document.getElementById("pidiot").value;
+		var vars = 'pid='+pid;
+		xhr.open("POST", url, true);
+		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhr.send(vars);
+		location.reload();
+	}
+</script>
